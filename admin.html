@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iyunga Tech - Student Management System</title>
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Iyunga Tech SMS</h2>
+        <ul>
+            <li><a href="#" class="active">Dashboard</a></li>
+            <li><a href="#">Students</a></li>
+            <li><a href="#">Classes</a></li>
+            <li><a href="#">Reports</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Student Management Dashboard</h1>
+            <p>Welcome, Admin</p>
+        </header>
+
+        <section class="stats">
+            <div class="card">
+                <h3>Total Students</h3>
+                <p id="total-students">0</p>
+            </div>
+            <div class="card">
+                <h3>Form One - Four</h3>
+                <p>O-Level</p>
+            </div>
+            <div class="card">
+                <h3>Active Status</h3>
+                <p>Online System</p>
+            </div>
+        </section>
+
+        <section class="content-area">
+            <h2>Add New Student</h2>
+            <form id="student-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" placeholder="e.g. John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="regNo">Registration Number:</label>
+                    <input type="text" id="regNo" placeholder="e.g. IYNG/2026/001" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentClass">Class/Stream:</label>
+                    <select id="studentClass" required>
+                        <option value="">Select Class</option>
+                        <option value="Form 1">Form 1</option>
+                        <option value="Form 2">Form 2</option>
+                        <option value="Form 3">Form 3</option>
+                        <option value="Form 4">Form 4</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">Add Student</button>
+            </form>
+        </section>
+
+        <!-- DAY 3: Student Records Table -->
+        <section class="content-area table-section">
+            <h2>Registered Students List</h2>
+            <table class="student-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Full Name</th>
+                        <th>Reg No</th>
+                        <th>Gender</th>
+                        <th>Class</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="student-list">
+                    <!-- Sample Data -->
+                    <tr>
+                        <td>1</td>
+                        <td>Josephat Mwita</td>
+                        <td>IYNG/2026/001</td>
+                        <td>Male</td>
+                        <td>Form 3</td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="admin-script.js"></script>
+</body>
+</html>
